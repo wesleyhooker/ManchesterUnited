@@ -13,10 +13,13 @@ def module_one(left_dash, right_dash, child_lock, master_unlock, left_inside,
                left_outside, right_inside, right_outside, gear_shift
     Returns: string indicating the position of the doors
     """
+    print(left_dash, right_dash, child_lock, master_unlock, left_inside,
+               left_outside, right_inside, right_outside, gear_shift)
+
     if gear_shift != "P":
         print("Both doors stay closed.")
         return
-    elif master_unlock == 0:
+    if master_unlock == 0:
         print("Both doors stay closed.")
         return
     if child_lock == 1:

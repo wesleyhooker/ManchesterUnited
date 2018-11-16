@@ -8,11 +8,17 @@ from urllib.request import urlopen
 
 
 def module_two():
-    test_file = []
-    with urlopen('www.icarus.cs.weber.edu/~hvalle/cs3030/data/minivanTest.csv') as the_file:
-        for word in the_file:
-            test_file.append(word.decode("utf-8"))
-    print(test_file)
+    """
+
+    """
+    test_file = urlopen('http://icarus.cs.weber.edu/~hvalle/cs3030/data/minivanTest.csv')
+    test_list = [line.decode('utf-8').strip('\n') for line in test_file]
+    del test_list[0]
+    for values in test_list:
+        values_list = values.split(",")
+        del values_list[0]
+       # module_one(*values_list)
+        module_one(value_list)
 
 def main():
     """
