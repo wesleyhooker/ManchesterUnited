@@ -13,7 +13,6 @@ def module_one(left_dash, right_dash, child_lock, master_unlock, left_inside,
                left_outside, right_inside, right_outside, gear_shift
     Returns: string indicating the position of the doors
     """
-    print(left_dash, right_dash, child_lock, master_unlock, left_inside, left_outside, right_inside, right_outside, gear_shift)
     print("Left dashboard switch (0 or 1): {}".format(left_dash))
     print("Right dashboard switch (0 or 1): {}".format(right_dash))
     print("Child lock switch (0 or 1): {}".format(child_lock))
@@ -47,7 +46,6 @@ def module_one(left_dash, right_dash, child_lock, master_unlock, left_inside,
     else:
         right_door_open = False
     #Print which doors are openi
-    print(right_door_open, left_door_open)
     if left_door_open and right_door_open:
         print("Both doors open")
         return
@@ -64,8 +62,6 @@ def main():
     Test your module
     """
     module_one(0, 1, 0, 1, 0, 1, 0, 0, "P")
-    print(0, 1, 0, 1, 0, 1, 0, 0, "P")
-
 
 
 if __name__ == "__main__":
