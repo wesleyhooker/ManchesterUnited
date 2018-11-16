@@ -14,11 +14,17 @@ def module_two():
     test_file = urlopen('http://icarus.cs.weber.edu/~hvalle/cs3030/data/minivanTest.csv')
     test_list = [line.decode('utf-8').strip('\n') for line in test_file]
     del test_list[0]
+
+    count = 1
     for values in test_list:
-        values_list = values.split(",")
+        print("Reading Record {}:".format(count))
+        values_list = values.split(", ")
         del values_list[0]
-       # module_one(*values_list)
-        module_one(value_list)
+        print(*values_list)
+        module_one(*values_list)
+        print()
+        count += 1
+       # module_one(value_list)
 
 def main():
     """
